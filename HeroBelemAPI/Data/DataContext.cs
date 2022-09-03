@@ -7,7 +7,7 @@ namespace HeroBelemAPI.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
-
+            Database.EnsureCreated();
         }
 
         public DbSet<HeroBelem> HeroesBelem { get; set; }
